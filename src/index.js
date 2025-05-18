@@ -15,7 +15,7 @@ import { createRoot } from 'react-dom/client';
 // );
 // const element = <h1 className='react-welcome' >'Привет! Реакт JSX работает!'</h1>;
 
-const messages = ['Привет друг!', 'Как дела?', 'Как настроение?', 'Как погода?'];
+const messages = ['Привет, друг!', 'Как дела?', 'Как настроение?', 'Как погода?'];
 const Message = (props) => <p>{props.message}</p>;
 const Messages = (props) => props.messages.map(msg => <Message message={msg} />);
 
