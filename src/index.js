@@ -17,7 +17,7 @@ import { createRoot } from 'react-dom/client';
 
 const messages = ['Привет, друг!', 'Как дела?', 'Как настроение?', 'Как погода?'];
 const Message = (props) => <p>{props.message}</p>;
-const Messages = (props) => props.messages.map(msg => <Message message={msg} />);
+const Messages = (props) => props.messages.map((msg, idx) => <Message message={msg} key={idx} />);
 
 const root = createRoot(document.getElementById('root'));
 root.render(<Messages messages={messages} />);
