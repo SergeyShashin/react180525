@@ -26,15 +26,16 @@ class App extends Component {
   }
 
   state = {
-    showCounter: true
+    showCounter: false
   };
 
+  handleToggleCounter = () => this.setState({ showCounter: !this.state.showCounter });
 
   render() {
     return (
       <div>
-        {this.state.showCounter && <Counter />}
-        <button >showCounter</button>
+        <button onClick={this.handleToggleCounter}>showCounter</button>
+        <div>{this.state.showCounter && <Counter/>}</div>
       </div>
     )
   }

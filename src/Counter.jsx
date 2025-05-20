@@ -9,12 +9,23 @@ export class Counter extends Component {
     counter: 8,
   };
 
+  numberInterval = null;
 
   handleClick = (e) => {
     this.setState(prevState => {
       return { counter: prevState.counter + Number(e.target.dataset.operation) }
     });
   };
+
+  componentDidMount() {
+    this.numberInterval = setInterval(() => {
+      console.log('Компонент показывается.')
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.numberInterval)
+  }
 
   render() {
     return (
