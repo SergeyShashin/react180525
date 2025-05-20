@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { MessagesList } from "components/MessagesList";
 
 const messages = [
   { author: 'Author', text: 'Привет, друг!' },
@@ -44,7 +45,8 @@ export class Messenger extends Component {
     return (
       <div>
         <h2>Messenger</h2>
-        {messages.map((message, idx) => <p key={idx}>{message.author}: {message.text}</p>)}
+        {/* {messages.map((message, idx) => <p key={idx}>{message.author}: {message.text}</p>)} */}
+        <MessagesList messages={messages} />
       </div>
     )
   }
