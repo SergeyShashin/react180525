@@ -7,7 +7,7 @@
 
 import React, { Component } from "react";
 import { createRoot } from 'react-dom/client';
-import { Counter } from "./components/Counter.jsx";
+import { Counter } from "components/Counter";
 
 // const element = React.createElement(
 //   'h1',
