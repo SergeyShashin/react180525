@@ -7,7 +7,8 @@
 
 import React, { Component } from "react";
 import { createRoot } from 'react-dom/client';
-import { Counter } from "components/Counter";
+// import { Counter } from "components/Counter";
+import { Messenger } from "components/Messenger";
 
 // const element = React.createElement(
 //   'h1',
@@ -20,27 +21,28 @@ import { Counter } from "components/Counter";
 // const Message = (props) => <p>{props.message}</p>;
 // const Messages = (props) => props.messages.map((msg, idx) => <Message message={msg} key={idx} />);
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-  }
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+//   }
 
-  state = {
-    showCounter: false
-  };
+//   state = {
+//     showCounter: false
+//   };
 
-  handleToggleCounter = () => this.setState({ showCounter: !this.state.showCounter });
+//   handleToggleCounter = () => this.setState({ showCounter: !this.state.showCounter });
 
-  render() {
-    return (
-      <div>
-        <button onClick={this.handleToggleCounter}>showCounter</button>
-        <div>{this.state.showCounter && <Counter/>}</div>
-      </div>
-    )
-  }
-}
+//   render() {
+//     return (
+//       <div>
+//         <button onClick={this.handleToggleCounter}>showCounter</button>
+//         <div>{this.state.showCounter && <Counter/>}</div>
+//       </div>
+//     )
+//   }
+// }
 
 const root = createRoot(document.getElementById('root'));
 // root.render(<Messages messages={messages} />);
-root.render(<App />);
+// root.render(<App />);
+root.render(<Messenger />);
