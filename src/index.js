@@ -7,6 +7,7 @@
 
 import React, { Component } from "react";
 import { createRoot } from 'react-dom/client';
+import { Counter } from "./Counter.jsx";
 
 // const element = React.createElement(
 //   'h1',
@@ -25,27 +26,19 @@ class App extends Component {
   }
 
   state = {
-    counter: 8,
+    showCounter: true
   };
 
-
-  handleClick = (e) => {
-    this.setState(prevState => {
-      return { counter: prevState.counter + Number(e.target.dataset.operation) }
-    });
-  }
 
   render() {
     return (
       <div>
-        <button data-operation='-1' onClick={this.handleClick}>-</button>
-        <span>{this.state.counter}</span>
-        <button data-operation='1' onClick={this.handleClick}>+</button>
+        {this.state.showCounter && <Counter />}
+        <button >showCounter</button>
       </div>
     )
   }
 }
-
 
 const root = createRoot(document.getElementById('root'));
 // root.render(<Messages messages={messages} />);
