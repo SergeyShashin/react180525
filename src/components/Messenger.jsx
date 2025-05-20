@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { MessagesList } from "components/MessagesList";
+import { MessageField } from "components/MessageField";
 
-const messages = [
-  { author: 'Author', text: 'Привет, друг!' },
-  { author: 'Author', text: 'Как дела?' },
-  { author: 'Author', text: 'Как погода?' },
-  { author: 'Author', text: 'Как настроение?' }
-];
+// const messages = [
+//   { author: 'Author', text: 'Привет, друг!' },
+//   { author: 'Author', text: 'Как дела?' },
+//   { author: 'Author', text: 'Как погода?' },
+//   { author: 'Author', text: 'Как настроение?' }
+// ];
 
 export class Messenger extends Component {
   constructor(props) {
@@ -20,11 +21,15 @@ export class Messenger extends Component {
   numberInterval = null;
 
   componentDidMount() {
-    this.numberInterval = setInterval(() => {
-      let randomIdx = Math.floor(Math.random() * messages.length);
-      // console.log(messages[randomIdx]);
-      this.setState({ messages: this.state.messages.concat(messages[randomIdx]) });
-    }, 3000);
+    // this.numberInterval = setInterval(() => {
+    //   let randomIdx = Math.floor(Math.random() * messages.length);
+    //   this.setState({ messages: this.state.messages.concat(messages[randomIdx]) });
+    // }, 3000);
+  }
+
+  addNewMessage = (message) => {
+    console.log(message);
+    this.setState({ messages: this.state.messages.concat(message) });
   }
 
   componentDidUpdate() {
@@ -46,6 +51,7 @@ export class Messenger extends Component {
       <div>
         <h2>Messenger</h2>
         {/* {messages.map((message, idx) => <p key={idx}>{message.author}: {message.text}</p>)} */}
+        <MessageField onSend={this.addNewMessage} />
         <MessagesList messages={messages} />
       </div>
     )
