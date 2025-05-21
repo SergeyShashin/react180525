@@ -28,7 +28,6 @@ export class Messenger extends Component {
   }
 
   addNewMessage = (message) => {
-    console.log(message);
     this.setState({ messages: this.state.messages.concat(message) });
   }
 
@@ -51,7 +50,7 @@ export class Messenger extends Component {
       <div>
         <h2>Messenger</h2>
         {/* {messages.map((message, idx) => <p key={idx}>{message.author}: {message.text}</p>)} */}
-        <MessageField onSend={this.addNewMessage} />
+        <MessageField onSend={this.addNewMessage} test={'qwer'} />
         <MessagesList messages={messages} />
       </div>
     )
