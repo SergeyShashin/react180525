@@ -50,7 +50,7 @@ export class Messenger extends Component {
       <div>
         <h2>Messenger</h2>
         {/* {messages.map((message, idx) => <p key={idx}>{message.author}: {message.text}</p>)} */}
-        <MessageField onSend={this.addNewMessage} test={'qwer'} />
+        <MessageField onSend={this.addNewMessage}/>
         <MessagesList messages={messages} />
       </div>
     )
