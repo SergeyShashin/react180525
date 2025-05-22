@@ -1,3 +1,5 @@
+import './MessageField.scss';
+
 import React, { Component } from "react";
 
 export class MessageField extends Component {
@@ -24,7 +26,7 @@ export class MessageField extends Component {
 
   render() {
     return (
-      <div>
+      <div className='messageField'>
         <input name='author' placeholder='author' onChange={this.handleInputChange} />
         <input name='text' placeholder='text' onChange={this.handleInputChange} />
         <button onClick={this.handleSend}>Отправить</button>

@@ -1,3 +1,4 @@
+import './Messenger.scss';
 import React, { Component } from "react";
 import { MessagesList } from "components/MessagesList";
 import { MessageField } from "components/MessageField";
@@ -47,7 +48,7 @@ export class Messenger extends Component {
   render() {
     let { messages } = this.state;
     return (
-      <div>
+      <div className='messenger'>
         <h2>Messenger</h2>
         {/* {messages.map((message, idx) => <p key={idx}>{message.author}: {message.text}</p>)} */}
         <MessageField onSend={this.addNewMessage}/>

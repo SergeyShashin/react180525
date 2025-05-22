@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: crimson;
+}
+
+.messenger {
+  background: beige;
+  min-height: 100vh;
+  padding: 10px;
+
+  h2 {
+    text-transform: capitalize;
+    margin-bottom: 5px;
+  }
+}
