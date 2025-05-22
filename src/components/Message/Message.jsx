@@ -1,5 +1,5 @@
+import './Message.css';
 import React, { Component } from "react";
-
 
 export class Message extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ export class Message extends Component {
   render() {
     let { message } = this.props;
     return (
-      <div>
+      <div className='message'>
         {message.author}: {message.text}
       </div>
     )
