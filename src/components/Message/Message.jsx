@@ -6,11 +6,16 @@ export class Message extends Component {
     super(props);
   }
 
+  get direction() {
+    return this.props.message.author === 'Автоответчик' ? 'start' : 'end';
+  }
+
   render() {
     let { message } = this.props;
     return (
-      <div className='message'>
-        {message.author}: {message.text}
+      <div className='message' style={{ alignSelf: `flex-${this.direction}` }}>
+        <div>{message.text}</div>
+        <div>{message.author}</div>
       </div>
     )
   }
