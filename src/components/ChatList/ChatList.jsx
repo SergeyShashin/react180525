@@ -47,9 +47,9 @@ export class ChatList extends Component {
                 },
               },
               palette: {
-                mode: 'dark',
+                mode: 'light',
                 primary: { main: 'rgb(102, 157, 246)' },
-                background: { paper: 'rgb(5, 30, 52)' },
+                background: { paper: 'rgb(235, 229, 217)'},
               },
             })}
           >
@@ -181,7 +181,7 @@ export class ChatList extends Component {
                         noWrap: true,
                         fontSize: 12,
                         lineHeight: '16px',
-                        color: open ? 'rgba(0,0,0,0)' : 'rgba(255,255,255,0.5)',
+                        color: open ? 'rgba(0,0,0,0)' : 'rgba(255, 255, 255, 0.78)',
                       }}
                       sx={{ my: 0 }}
                     />
