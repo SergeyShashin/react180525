@@ -1,6 +1,8 @@
 import './MessageField.scss';
 
 import React, { Component } from "react";
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 export class MessageField extends Component {
   constructor(props) {
@@ -33,9 +35,12 @@ export class MessageField extends Component {
   render() {
     return (
       <div className='messageField'>
-        <input name='author' placeholder='author' onChange={this.handleInputChange} />
-        <input name='text' placeholder='text' onChange={this.handleInputChange} onKeyDown={this.handleCtrlEnter} />
-        <button onClick={this.handleSend}>Отправить</button>
+        {/* <input name='author' placeholder='author' onChange={this.handleInputChange} /> */}
+        {/* <input name='text' placeholder='text' onChange={this.handleInputChange} onKeyDown={this.handleCtrlEnter} /> */}
+        <TextField name='author' variant="standard" label='author' onChange={this.handleInputChange} />
+        <TextField name='text' variant="standard" label='text' onChange={this.handleInputChange} onKeyDown={this.handleCtrlEnter} />
+        {/* <button onClick={this.handleSend}>Отправить</button> */}
+        <Button onClick={this.handleSend}>Отправить</Button>
       </div>
     )
   }
