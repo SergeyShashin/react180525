@@ -12,16 +12,16 @@ export class Message extends Component {
   }
 
   render() {
-    let { message } = this.props;
+    let { author, text } = this.props.message;
     let classes = classNames('message', {
-      'message-owner': message.author !== 'Автоответчик',
-      'message-autoanswering': message.author === 'Автоответчик'
+      'message-owner': author !== 'Автоответчик',
+      'message-autoanswering': author === 'Автоответчик'
     });
     return (
       // <div className='message' style={{ alignSelf: `flex-${this.direction}` }}>
       <div className={classes}>
-        <div>{message.text}</div>
-        <div>{message.author}</div>
+        <div>{text}</div>
+        <div className='message-sender'>{author}</div>
       </div>
     )
   }
