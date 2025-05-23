@@ -2,6 +2,8 @@ import './Messenger.scss';
 import React, { Component } from "react";
 import { MessagesList } from "components/MessagesList";
 import { MessageField } from "components/MessageField";
+import { Header } from 'components/Header';
+import { ChatList } from 'components/ChatList';
 
 // const messages = [
 //   { author: 'Author', text: 'Привет, друг!' },
@@ -49,10 +51,15 @@ export class Messenger extends Component {
     let { messages } = this.state;
     return (
       <div className='messenger'>
-        <h2>Messenger</h2>
         {/* {messages.map((message, idx) => <p key={idx}>{message.author}: {message.text}</p>)} */}
-        <MessageField onSend={this.addNewMessage}/>
-        <MessagesList messages={messages} />
+        <Header />
+        <div className='main'>
+          <ChatList />
+          <div>
+            <MessageField onSend={this.addNewMessage} />
+            <MessagesList messages={messages} />
+          </div>
+        </div>
       </div>
     )
   }

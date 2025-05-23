@@ -8,9 +8,9 @@
   background: beige;
   min-height: 100vh;
   padding: 10px;
+}
 
-  h2 {
-    text-transform: capitalize;
-    margin-bottom: 5px;
-  }
+.main {
+  display: flex;
+  justify-content: space-around;
 }
