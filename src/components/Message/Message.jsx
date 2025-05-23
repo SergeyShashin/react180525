@@ -1,5 +1,6 @@
 import './Message.scss';
 import React, { Component } from "react";
+import classNames from 'classnames';
 
 export class Message extends Component {
   constructor(props) {
@@ -12,8 +13,13 @@ export class Message extends Component {
 
   render() {
     let { message } = this.props;
+    let classes = classNames('message', {
+      'message-owner': message.author !== 'Автоответчик',
+      'message-autoanswering': message.author === 'Автоответчик'
+    });
     return (
-      <div className='message' style={{ alignSelf: `flex-${this.direction}` }}>
+      // <div className='message' style={{ alignSelf: `flex-${this.direction}` }}>
+      <div className={classes}>
         <div>{message.text}</div>
         <div>{message.author}</div>
       </div>

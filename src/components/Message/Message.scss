@@ -4,4 +4,12 @@
   padding: 10px;
   margin: 5px;
   border-radius: 5px;
+  
+  &-owner{
+    align-self: flex-end;
+  }
+
+  &-autoanswering{
+    align-self: flex-start;
+  }
 }
