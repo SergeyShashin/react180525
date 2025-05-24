@@ -1,11 +1,11 @@
 .messageField {
   margin-bottom: 10px;
+  padding: 20px;
 
   // input,
   // button {
   //   background: none;
   //   border: none;
-  //   color: crimson;
   //   outline: none;
   //   padding: 5px;
   //   width: 200px;
@@ -14,8 +14,17 @@
   // input::placeholder {
   //   color: crimson;
   // }
-  
+
   // button:hover {
   //   cursor: pointer;
   // }
+
+  input,
+  button {
+    color: crimson;
+  }
+
+  button {
+    margin-top: 10px;
+  }
 }

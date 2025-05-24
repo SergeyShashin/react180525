@@ -56,8 +56,8 @@ export class Messenger extends Component {
         <div className='main'>
           <ChatList />
           <div>
-            <MessageField onSend={this.addNewMessage} />
             <MessagesList messages={messages} />
+            <MessageField onSend={this.addNewMessage} />
           </div>
         </div>
       </div>

@@ -1,5 +1,8 @@
 .messagesList{
-  overflow-y: scroll;
+  // overflow-y: scroll;
   display: flex;
   flex-direction: column;
+  width: 1000px;
+  padding: 20px;
+  min-height: 50vh;
 }
