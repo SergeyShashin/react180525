@@ -23,7 +23,7 @@ export class MessageField extends Component {
 
   handleSend = () => {
     this.props.onSend(this.state);
-    this.setState({ text: '' });
+    // this.setState({ text: '' });
   };
 
   handleCtrlEnter = (e) => {
