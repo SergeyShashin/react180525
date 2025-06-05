@@ -49,6 +49,7 @@ export class Messenger extends Component {
 
   render() {
     let { messages } = this.state;
+    console.log(this.props);
     return (
       <div className='messenger'>
         {/* {messages.map((message, idx) => <p key={idx}>{message.author}: {message.text}</p>)} */}

@@ -8,6 +8,7 @@
 import React, { Component } from "react";
 import { createRoot } from 'react-dom/client';
 // import { Counter } from "components/Counter";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Messenger } from "components/Messenger";
 
 // const element = React.createElement(
@@ -45,4 +46,11 @@ import { Messenger } from "components/Messenger";
 const root = createRoot(document.getElementById('root'));
 // root.render(<Messages messages={messages} />);
 // root.render(<App />);
-root.render(<Messenger />);
+root.render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" render={() => <Messenger />} />
+    </Routes>
+    {/* <Messenger /> */}
+  </BrowserRouter>
+);
