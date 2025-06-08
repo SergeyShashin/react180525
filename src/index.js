@@ -48,9 +48,9 @@ const root = createRoot(document.getElementById('root'));
 // root.render(<App />);
 root.render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" render={() => <Messenger />} />
-    </Routes>
-    {/* <Messenger /> */}
+    {/* <Routes> */}
+      {/* <Route path="/" render={() => <Messenger />} /> */}
+    {/* </Routes> */}
+    <Messenger />
   </BrowserRouter>
 );
