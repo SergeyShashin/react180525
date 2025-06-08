@@ -48,9 +48,10 @@ const root = createRoot(document.getElementById('root'));
 // root.render(<App />);
 root.render(
   <BrowserRouter>
-    {/* <Routes> */}
-      {/* <Route path="/" render={() => <Messenger />} /> */}
-    {/* </Routes> */}
-    <Messenger />
+    <Routes>
+      <Route exact path="/" element={<Messenger />} />
+      <Route exact path="chats/:id" element={<Messenger />} />
+    </Routes>
+    {/* <Messenger /> */}
   </BrowserRouter>
 );
